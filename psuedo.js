@@ -84,9 +84,6 @@ function (checkAlarm) {
     if (currentTime === alarmTime){
         window.alert("It's time to get up!");
     }
-    else {
-        null
-    }
 };
 */
 
