@@ -52,6 +52,7 @@ setInterval(() => {
 
 }); 
 // Need a function for setting an alarm
+
 function createAlarm() {
     if (isAlarmSet) {
         alarmTime = "";
@@ -69,4 +70,4 @@ function createAlarm() {
     setAlarm.innerText = "Clear Alarm";
 }
 
-setAlarm.addEventListener("click", setAlarm);
+setAlarm.addEventListener("click", createAlarm);
