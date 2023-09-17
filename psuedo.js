@@ -1,14 +1,19 @@
 // Set the variables for clock and buttons
 
 // Need a functional clock variable
-const currentTime = document.querySelector("h1"),
+const currentTime = document.querySelector("h1");
 
 //
-content = document.querySelector(".content"),
+const content = document.querySelector(".content");
 //Menu selectors for time
-timeMenu = document.querySelectorAll("select"),
+const timeMenu = document.querySelectorAll("select");
 // Alarm button
-setAlarm = document.querySelector("button");
+const setAlarm = document.querySelector("button");
+
+// Need the alarm to alert you when it goes off.
+let alarmTime, isAlarmSet = window.alert("It's time to get up!")
+
+
 
 // Drop downs need numbers to choose from
 
