@@ -10,10 +10,8 @@ const timeMenu = document.querySelectorAll("select");
 // Alarm button
 const setAlarm = document.querySelector("button");
 
-// Need the alarm to alert you when it goes off.
-let alarmTime, isAlarmSet = window.alert("It's time to get up!")
-
-
+//Is the alarm set
+let isAlarmSet = false;
 
 // Drop downs need numbers to choose from
 
@@ -39,7 +37,7 @@ for (let i = 2; i > 0; i--) {
 } 
 
 // Make the clock work with function
-setInterval(() => {
+function whatTime(){
     let date = new Date(),
     h = date.getHours(),
     m = date.getMinutes(),
@@ -55,13 +53,16 @@ setInterval(() => {
     s = s < 10 ? "0" + s : s;
     currentTime.innerText = `${h}:${m}:${s} ${ampm}`;
 
-}); 
+}; 
+
+setInterval(whatTime, 1000);
+
 // Need a function for setting an alarm
 
 function createAlarm() {
     if (isAlarmSet) {
         alarmTime = "";
-        createAlarm.innerText = "Set Alarm";
+        setAlarm.innerText = "Set Alarm";
         return isAlarmSet = false;
     }
 
@@ -76,3 +77,16 @@ function createAlarm() {
 }
 
 setAlarm.addEventListener("click", createAlarm);
+
+//Need it to let us know
+/*
+function (checkAlarm) {
+    if (currentTime === alarmTime){
+        window.alert("It's time to get up!");
+    }
+    else {
+        null
+    }
+};
+*/
+
