@@ -55,7 +55,6 @@ setInterval(() => {
 function createAlarm() {
     if (isAlarmSet) {
         alarmTime = "";
-        content.classList.remove("disable");
         createAlarm.innerText = "Set Alarm";
         return isAlarmSet = false;
     }
@@ -67,7 +66,6 @@ function createAlarm() {
 
     alarmTime = time;
     isAlarmSet = true;
-    content.classList.add("disable");
     setAlarm.innerText = "Clear Alarm";
 }
 
